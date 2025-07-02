@@ -7,7 +7,7 @@ model = YOLO('yolov8n.pt')  # Model YOLOv8n
 # Buka webcam
 cap = cv2.VideoCapture(0)
 
-# Daftar kelas yang ingin dideteksi (person + elektronik)
+# Daftar kelas yang dideteksi (person + elektronik)
 target_classes = {
     0: 'person',        # Orang
     67: 'cell phone',   # HP

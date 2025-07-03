@@ -7,8 +7,6 @@ Proyek ini mengimplementasikan sistem deteksi objek real-time menggunakan YOLOv8
 - Metrik kinerja (penghitung FPS)
 - Pelacakan riwayat deteksi
 
-![Demo Screenshot](demo_screenshoot.jpg) *(Contoh hasil deteksi)*
-
 ## 🚀 Fitur
 - **Deteksi Tertarget**: Fokus pada 6 kelas objek spesifik
 - **Dashboard Kinerja**: Menampilkan FPS real-time dan jumlah objek
@@ -76,5 +74,3 @@ graph TD
     G -->|Ya| H[Keluar]
     G -->|Tidak| B
 ```
-
-Beri tahu saya jika Anda ingin menambahkan bagian lain atau memodifikasi kontennya!

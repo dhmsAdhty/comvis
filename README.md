@@ -1,84 +1,80 @@
-# 📝 README for Real-Time Person & Electronics Detection System
+# 📝 README untuk Sistem Deteksi Orang & Elektronik Real-Time
 
-## 📌 Overview
-This project implements a real-time object detection system using YOLOv8 to identify **people and electronic devices** (phones, laptops, TVs, keyboards, mice) from webcam feed. The system provides:
-- Real-time detection with bounding boxes
-- Object counting per category
-- Performance metrics (FPS counter)
-- Detection history tracking
+## 📌 Gambaran Umum
+Proyek ini mengimplementasikan sistem deteksi objek real-time menggunakan YOLOv8 untuk mengidentifikasi **orang dan perangkat elektronik** (ponsel, laptop, TV, keyboard, mouse) dari umpan webcam. Sistem ini menyediakan:
+- Deteksi real-time dengan kotak pembatas
+- Penghitungan objek per kategori
+- Metrik kinerja (penghitung FPS)
+- Pelacakan riwayat deteksi
 
-![Demo Screenshot](demo_screenshot.jpg) *(Example detection output)*
+![Demo Screenshot](demo_screenshoot.jpg) *(Contoh hasil deteksi)*
 
-## 🚀 Features
-- **Targeted Detection**: Focuses on 6 specific object classes
-- **Performance Dashboard**: Shows real-time FPS and object counts
-- **History Tracking**: Maintains 5-minute detection history
-- **High Resolution**: Processes video at 1280x720 resolution
-- **Optimized Inference**: Uses confidence thresholding for better accuracy
+## 🚀 Fitur
+- **Deteksi Tertarget**: Fokus pada 6 kelas objek spesifik
+- **Dashboard Kinerja**: Menampilkan FPS real-time dan jumlah objek
+- **Pelacakan Riwayat**: Menyimpan riwayat deteksi 5 menit
+- **Resolusi Tinggi**: Memproses video dengan resolusi 1280x720
+- **Inferensi Dioptimalkan**: Menggunakan threshold kepercayaan untuk akurasi lebih baik
 
-## ⚙️ Installation
-1. Clone the repository:
+## ⚙️ Instalasi
+1. Clone repositori:
    ```bash
    git clone https://github.com/dhmsAdhty/comvis.git
    cd comvis
    ```
 
-2. Install dependencies:
+2. Instal dependensi:
    ```bash
    pip install -r requirements.txt
    ```
-   *(or manually install: `pip install ultralytics opencv-python`)*
+   *(atau instal manual: `pip install ultralytics opencv-python`)*
 
-3. Download YOLOv8n model (will auto-download on first run if not present)
+3. Unduh model YOLOv8n (akan terunduh otomatis saat pertama kali dijalankan jika belum ada)
 
-## 🖥️ Usage
-Run the detection system:
+## 🖥️ Penggunaan
+Jalankan sistem deteksi:
 ```bash
-python detect.py
+python deteksi2.py
 ```
 
-**Controls:**
-- Press `Q` to quit the application
-- See real-time stats in the dashboard overlay
+**Kontrol:**
+- Tekan `Q` untuk keluar dari aplikasi
+- Lihat statistik real-time di overlay dashboard
 
-## 🎯 Target Classes
-| Class ID | Object   | Display Color |
-|----------|----------|---------------|
-| 0        | Person   | Green         |
-| 67       | Phone    | Red           |
-| 63       | Laptop   | Blue          |
-| 62       | TV       | Yellow        |
-| 66       | Keyboard | Cyan          |
-| 64       | Mouse    | Magenta       |
+## 🎯 Kelas Target
+| ID Kelas | Objek    | Warna Tampilan |
+|----------|----------|----------------|
+| 0        | Orang    | Hijau          |
+| 67       | Ponsel   | Merah          |
+| 63       | Laptop   | Biru           |
+| 62       | TV       | Kuning         |
+| 66       | Keyboard | Cyan           |
+| 64       | Mouse    | Magenta        |
 
-## 🛠️ Customization
-To modify the detection:
-1. Change target classes in `target_classes` dictionary
-2. Adjust confidence threshold in `model.predict(conf=0.6)`
-3. Modify resolution in `cap.set()` calls
+## 🛠️ Kustomisasi
+Untuk memodifikasi deteksi:
+1. Ubah kelas target dalam kamus `target_classes`
+2. Sesuaikan threshold kepercayaan di `model.predict(conf=0.6)`
+3. Modifikasi resolusi di pemanggilan `cap.set()`
 
-## 📊 Performance
-- Achieves **15-25 FPS** on mid-range CPUs
-- Lower resolution increases FPS but reduces detection accuracy
+## 🤝 Kontribusi
+Pull request diterima! Untuk perubahan besar, silakan buka issue terlebih dahulu.
 
-## 🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first.
-
-## 📜 License
+## 📜 Lisensi
 [MIT](LICENSE)
 
 ---
 
 ```mermaid
 graph TD
-    A[Webcam Input] --> B[Frame Capture]
-    B --> C[YOLOv8 Inference]
-    C --> D[Class Filtering]
-    D --> E[Counting & Visualization]
-    E --> F[Display Output]
-    F --> G{Quit?}
-    G -->|Yes| H[Exit]
-    G -->|No| B
+    A[Input Webcam] --> B[Pengambilan Frame]
+    B --> C[Inferensi YOLOv8]
+    C --> D[Penyaringan Kelas]
+    D --> E[Penghitungan & Visualisasi]
+    E --> F[Tampilan Output]
+    F --> G{Keluar?}
+    G -->|Ya| H[Keluar]
+    G -->|Tidak| B
 ```
 
-Let me know if you'd like me to add any additional sections or modify the content!
+Beri tahu saya jika Anda ingin menambahkan bagian lain atau memodifikasi kontennya!
